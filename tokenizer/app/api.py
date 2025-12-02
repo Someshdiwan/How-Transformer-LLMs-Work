@@ -2,10 +2,17 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 import os, sys
 
+from tokenizer import app
+
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 sys.path.append(ROOT)
 
 from tokenizer.core.mt_translate_core import translate
+from tokenizer.core.mt_translate_core import translate, model
+
+@app.on_event("startup")
+def load_once():
+    print("Model loaded:", model is not None)
 
 app = FastAPI()
 
@@ -28,3 +35,4 @@ def health():
 def t(req: Req):
     out = translate(req.text, req.max_len)
     return Res(translation=out)
+
