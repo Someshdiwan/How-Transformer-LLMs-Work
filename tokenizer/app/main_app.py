@@ -1,11 +1,12 @@
 # tokenizer/app/main_app.py
 
-import os
 import json
 from typing import List, Dict, Any, Optional
 import sys
+
 import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../..")))
+
 import torch
 import streamlit as st
 import pandas as pd
@@ -506,7 +507,6 @@ section = st.sidebar.radio(
     ["Translator", "Attention heatmap", "Training dashboard", "REST API tester", "Model I/O"],
 )
 
-
 if section == "Translator":
     render_translator()
 elif section == "Attention heatmap":
@@ -517,4 +517,3 @@ elif section == "REST API tester":
     render_rest_api_tester()
 elif section == "Model I/O":
     render_model_io()
-    
