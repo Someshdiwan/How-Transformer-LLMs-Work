@@ -445,7 +445,7 @@ def render_rest_api_tester():
                 resp = requests.post(
                     url,
                     json={"text": text, "max_len": max_len},
-                    timeout=10,
+                    timeout=30,
                 )
             st.subheader("HTTP status")
             st.write(resp.status_code)
