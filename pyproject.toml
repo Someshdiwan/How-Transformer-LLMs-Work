@@ -3,16 +3,18 @@ name = "how_transformer_llms_work"
 version = "0.1.0"
 description = ""
 authors = ["Somesh Diwan"]
+package-mode = true
 
 [tool.poetry.dependencies]
 python = ">=3.9,<3.14"
 torch = "*"
-sentencepiece = "*"
 streamlit = "*"
-numpy = "*"
-matplotlib = "*"
+sentencepiece = "*"
 fastapi = "*"
 uvicorn = "*"
+numpy = "*"
 
 [tool.poetry.packages]
-include = [{ include = "tokenizer" }]
+packages = [
+    { include = "tokenizer" }
+]
