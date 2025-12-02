@@ -1,12 +1,12 @@
 [tool.poetry]
 name = "how-transformer-llms-work"
 version = "0.1.0"
-description = "EN-HI Transformer and Streamlit app"
+description = "EN-HI Transformer + Streamlit app"
 authors = ["Somesh Diwan"]
 package-mode = false
 
 [tool.poetry.dependencies]
-python = ">=3.9,<3.14"
+python = ">=3.10,<3.14"
 streamlit = "^1.51.0"
 torch = "^2.1.0"
 sentencepiece = "^0.2.0"
