@@ -431,7 +431,11 @@ def render_rest_api_tester():
         "`uvicorn tokenizer.app.api:app --reload --port 8000`"
     )
 
-    url = st.text_input("Endpoint URL", "http://127.0.0.1:8000/translate")
+    # url = st.text_input("Endpoint URL", "http://127.0.0.1:8000/translate")
+    url = st.text_input(
+        "Endpoint URL",
+        "https://how-transformer-llms-work.onrender.com/translate"
+    )
     text = st.text_area("English text", "Hello world")
     max_len = st.slider("Max length", 10, 80, 40)
 
