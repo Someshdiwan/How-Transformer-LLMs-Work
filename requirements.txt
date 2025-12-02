@@ -1,0 +1,10 @@
+fastapi
+uvicorn[standard]
+torch
+sentencepiece
+streamlit
+pydantic
+requests
+numpy
+pandas
+matplotlib
