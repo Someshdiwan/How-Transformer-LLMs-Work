@@ -1,20 +1,18 @@
 [tool.poetry]
-name = "how-transformer-llms-work"
+name = "how_transformer_llms_work"
 version = "0.1.0"
-description = "Transformer + Tokenizer + Streamlit demo"
+description = ""
 authors = ["Somesh Diwan"]
-package-mode = false
 
 [tool.poetry.dependencies]
 python = ">=3.9,<3.14"
 torch = "*"
 sentencepiece = "*"
 streamlit = "*"
-matplotlib = "*"
 numpy = "*"
+matplotlib = "*"
 fastapi = "*"
 uvicorn = "*"
 
-[build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+[tool.poetry.packages]
+include = [{ include = "tokenizer" }]
