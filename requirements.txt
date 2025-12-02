@@ -8,3 +8,7 @@ requests
 numpy
 pandas
 matplotlib
+sentencepiece
+streamlit
+pydantic
+numpy

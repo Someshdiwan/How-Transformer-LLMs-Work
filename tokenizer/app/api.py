@@ -23,3 +23,13 @@ def t(req: Req):
 @app.get("/health")
 def h():
     return {"ok": True}
+
+from fastapi import FastAPI
+
+app = FastAPI()
+
+@app.get("/")
+def health():
+    return {"status": "ok", "message": "FastAPI running"}
+
+
