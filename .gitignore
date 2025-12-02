@@ -16,19 +16,24 @@ dist/
 *.egg-info/
 *.egg
 
+# Large datasets – ignore
 tokenizer/data/corpus/
 tokenizer/data/json/
 
+# Training logs – ignore
 tokenizer/data/runs/
 !tokenizer/data/runs/.gitkeep
 
+# Training model checkpoints – ignore
 tokenizer/data/trained_models/
 *.pt
 *.bin
 *.safetensors
 
-tokenizer/data/tokenizers/*.model
-tokenizer/data/tokenizers/*.vocab
+# ALLOW tokenizer SPM models (these are required)
+# DO NOT ignore:
+# tokenizer/data/tokenizers/*.model
+# tokenizer/data/tokenizers/*.vocab
 
 *.log
 logs/
@@ -68,11 +73,13 @@ tokenizer/model_architecture/
 *.secret
 *.key
 *.credentials
-/tokenizer/data/tokenizers/__init__.py
-/tokenizer/data/__init__.py
-/encoder–decoder transformer in PyTorch/data/model/config.py
-/encoder–decoder transformer in PyTorch/data/model/dummy_loader2.py
-/encoder–decoder transformer in PyTorch/data/en_hi_tiny.json
-/encoder–decoder transformer in PyTorch/data/model/positional_encoding.py
-/encoder–decoder transformer in PyTorch/data/model/train2.py
-/encoder–decoder transformer in PyTorch/data/model/transformer_mt.py
+
+# ALLOW encoder–decoder transformer MODEL SOURCE FILES
+# Remove all these lines below — they break imports:
+
+#/encoder–decoder transformer in PyTorch/data/model/config.py
+#/encoder–decoder transformer in PyTorch/data/model/dummy_loader2.py
+#/encoder–decoder transformer in PyTorch/data/en_hi_tiny.json
+#/encoder–decoder transformer in PyTorch/data/model/positional_encoding.py
+#/encoder–decoder transformer in PyTorch/data/model/train2.py
+#/encoder–decoder transformer in PyTorch/data/model/transformer_mt.py
