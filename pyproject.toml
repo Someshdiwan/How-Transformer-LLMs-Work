@@ -1,20 +1,19 @@
 [tool.poetry]
-name = "how_transformer_llms_work"
+name = "how-transformer-llms-work"
 version = "0.1.0"
-description = ""
+description = "EN-HI Transformer and Streamlit app"
 authors = ["Somesh Diwan"]
-package-mode = true
+package-mode = false
 
 [tool.poetry.dependencies]
 python = ">=3.9,<3.14"
-torch = "*"
-streamlit = "*"
-sentencepiece = "*"
-fastapi = "*"
-uvicorn = "*"
-numpy = "*"
+streamlit = "^1.51.0"
+torch = "^2.1.0"
+sentencepiece = "^0.2.0"
+pandas = "^2.0.0"
+matplotlib = "^3.8.0"
+requests = "^2.32.0"
 
-[tool.poetry.packages]
-packages = [
-    { include = "tokenizer" }
-]
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
