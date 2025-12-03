@@ -49,10 +49,7 @@ CURRENT_MODEL = os.path.join(MODEL_DIR, "en_hi_latest.pt")
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 
 
-# =============================================================================
-# CSS / theming
-# =============================================================================
-
+# CSS
 st.markdown(
     """
     <style>
@@ -107,10 +104,7 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-
-# =============================================================================
 # Utility functions
-# =============================================================================
 
 def load_loss_curve(run_dir: str) -> Optional[List[float]]:
     """
@@ -502,9 +496,7 @@ def render_model_io():
                 os.remove(tmp_path)
 
 
-# =============================================================================
 # Sidebar routing
-# =============================================================================
 
 st.sidebar.title("EN→HI Transformer Lab")
 section = st.sidebar.radio(
