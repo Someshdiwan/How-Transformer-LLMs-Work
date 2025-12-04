@@ -7,7 +7,6 @@ from tokenizer import app
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 sys.path.append(ROOT)
 
-from tokenizer.core.mt_translate_core import translate
 from tokenizer.core.mt_translate_core import translate, model
 
 @app.on_event("startup")

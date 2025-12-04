@@ -28,10 +28,7 @@ from tokenizer.core.config import (
     pad_id,
 )
 
-# =============================================================================
 # Paths / constants
-# =============================================================================
-
 st.set_page_config(
     page_title="EN→HI Transformer Lab",
     page_icon="🌙",
@@ -43,13 +40,13 @@ DATA_DIR = os.path.join(ROOT, "data")
 RUNS_DIR = os.path.join(DATA_DIR, "runs")
 MODEL_DIR = os.path.join(DATA_DIR, "trained_models")
 
-# model used by Model I/O tab (training script keeps this updated)
+# model used by Model I/O tab and training script keeps this updated
 CURRENT_MODEL = os.path.join(MODEL_DIR, "en_hi_latest.pt")
 
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 
 
-# CSS
+# C Layout
 st.markdown(
     """
     <style>
@@ -105,11 +102,9 @@ st.markdown(
 )
 
 # Utility functions
-
 def load_loss_curve(run_dir: str) -> Optional[List[float]]:
     """
     Robustly load a loss curve from run_dir/loss_curve.json.
-
     Supports:
       1) [0.54, 0.41, ...]
       2) [{"epoch": 0, "loss": 0.54}, ...]
@@ -171,10 +166,7 @@ def list_runs() -> List[str]:
         [d for d in os.listdir(RUNS_DIR) if os.path.isdir(os.path.join(RUNS_DIR, d))]
     )
 
-
-# =============================================================================
 # Section renderers
-# =============================================================================
 
 def render_translator():
     st.title("English → Hindi Translator")
