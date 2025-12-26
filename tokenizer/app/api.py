@@ -34,4 +34,3 @@ def health():
 def t(req: Req):
     out = translate(req.text, req.max_len)
     return Res(translation=out)
-

@@ -1,4 +1,4 @@
-Transformer model architecture (your project’s exact structure)
+Transformer model architecture
 
 1. Input embeddings
 English and Hindi token IDs are mapped through learned embedding matrices:
@@ -99,7 +99,7 @@ O(L² * d_model) masked self-attention
 plus
 O(L_src * L_tgt * d_model) cross-attention.
 
-Your configuration:
+configuration:
 d_model = 256
 nhead = 8
 num_layers = 3
@@ -110,5 +110,3 @@ After training, model parameters stored in:
 data/trained_models/enhi_d256_L3_V300_<timestamp>.pt.
 
 Loaded by inference and FastAPI.
-
-This description matches the exact implementation in transformer_mt.py and reflects the structure built by your training pipeline.

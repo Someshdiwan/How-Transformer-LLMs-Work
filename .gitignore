@@ -83,3 +83,4 @@ tokenizer/model_architecture/
 #/encoder–decoder transformer in PyTorch/data/model/positional_encoding.py
 #/encoder–decoder transformer in PyTorch/data/model/train2.py
 #/encoder–decoder transformer in PyTorch/data/model/transformer_mt.py
+/Transformer Architecture/models/

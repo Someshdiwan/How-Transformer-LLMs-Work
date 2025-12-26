@@ -81,5 +81,3 @@ Your configuration (d_model=256, layers=3, heads=8) is within feasible CPU/GPU l
 • run metadata saved to data/runs/<run_id>/metadata.json
 • loss curves saved under:
 loss_curve.json (list or list-of-dicts)
-
-These feed into the Streamlit dashboard and attention-heatmap tools.
